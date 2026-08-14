@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William McCown — Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">William McCown</div>
+            <button class="hamburger" id="hamburgerBtn">
+                ☰
+            </button>
+            
+            <ul class="nav-links" id="mobileMenu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <span class="theme-icon" id="themeIcon">🌙</span>
+
+        </div>
+    </nav>
+
+
+    <!-- Hero -->
+    <section class="hero fade-in" id="hero">
+        <h1>William McCown</h1>
+        <h2>Software Engineer</h2>
+        <p>Software engineer transitioning from a 20-year EMS career. I build practical, real-world apps with a focus on clarity, reliability, and clean user experiences.</p>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="resume.pdf" class="btn secondary">Download Resume</a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about fade-in" id="about">
+        <div class="about-text">
+            <h3>About Me</h3>
+            <p>I’m a software engineer transitioning from a 20-year career in Fire/Rescue/EMS, where I worked as a paramedic and held leadership roles in training, safety, and protocol development.</p>
+            <p>I recently completed my BS in Computer Information Technology at Western Kentucky University, focusing on programming and software engineering. I enjoy building tools that track data, visualize trends, and help people make informed decisions.</p>
+        </div>
+        <div class="about-photo">
+            <img src="media/graduation.jpg" alt="Graduation photo" class="about-photo-img">
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects fade-in" id="projects">
+        <h3>Projects</h3>
+
+        <div class="project-card">
+            <img src="seizuredoc.png" alt="SeizureDoc screenshot">
+            <div class="project-info">
+                <h4>SeizureDoc — React Native</h4>
+                <p>A mobile app for logging seizure events, medications, and long-term patterns. Inspired by years of EMS experience and built with a focus on clarity, speed, and reliability.</p>
+
+                <p class="tech">Tech: React Native, Expo, SQLite</p>
+
+                <ul class="learned">
+                    <li>Designing fast, simple input screens</li>
+                    <li>Managing local data storage</li>
+                    <li>Structuring mobile data flows</li>
+                    <li>Building UI that stays out of the user’s way</li>
+                </ul>
+
+                <a href="#" class="project-link">View on GitHub</a>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <img src="training-dashboard.png" alt="Training Dashboard screenshot">
+            <div class="project-info">
+                <h4>Training & Protocol Manager Dashboard — Web App</h4>
+                <p>A web-based dashboard designed to organize employee training records, track certifications, and manage protocol updates across multiple EMS locations. Inspired by my experience overseeing training and safety compliance for more than 100 employees.</p>
+
+                <p class="tech">Tech: PHP, SQL, HTML5, CSS, XAMPP</p>
+
+                <ul class="learned">
+                    <li>Structuring relational data for real-world workflows</li>
+                    <li>Building clean, functional admin interfaces</li>
+                    <li>Designing simple forms for fast data entry</li>
+                    <li>Managing user roles and access levels</li>
+                    <li>Turning operational experience into software requirements</li>
+                </ul>
+
+                <a href="#" class="project-link">View on GitHub</a>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+            <img src="incident-tool.png" alt="Incident Log Tool screenshot">
+            <div class="project-info">
+                <h4>Incident Log & Reporting Tool — Python / SQLite</h4>
+                <p>A lightweight desktop tool for logging incident details, generating summaries, and exporting reports. Designed to mimic the workflow of EMS run sheets while improving clarity and reducing repetitive data entry.</p>
+
+                <p class="tech">Tech: Python, SQLite</p>
+
+                <ul class="learned">
+                    <li>Designing structured data entry flows</li>
+                    <li>Building small tools that solve specific problems</li>
+                    <li>Working with SQLite for fast local storage</li>
+                    <li>Generating clean, readable reports</li>
+                </ul>
+
+                <a href="#" class="project-link">View on GitHub</a>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+            <img src="homelab-dashboard.png" alt="Homelab Dashboard screenshot">
+            <div class="project-info">
+                <h4>Homelab Dashboard — JavaScript / Linux</h4>
+                <p>A simple dashboard for monitoring local services, storage usage, and system health across a small homelab environment. Built to centralize information from multiple machines and make troubleshooting easier.</p>
+
+                <p class="tech">Tech: JavaScript, Linux, Shell scripts</p>
+
+                <ul class="learned">
+                    <li>Working with system-level data</li>
+                    <li>Building dashboards that surface useful information</li>
+                    <li>Automating routine checks</li>
+                    <li>Designing interfaces that stay clean and readable</li>
+                </ul>
+
+                <a href="#" class="project-link">View on GitHub</a>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Skills -->
+    <section class="skills fade-in" id="skills">
+        <h3>Skills</h3>
+        <div class="skills-grid">
+            <div><strong>Languages</strong><br>Python, JavaScript, Java, PHP</div>
+            <div><strong>Frameworks</strong><br>React Native, Kivy/KivyMD</div>
+            <div><strong>Tools</strong><br>Git, XAMPP, SQLite</div>
+            <div><strong>Systems</strong><br>Windows, Linux, Android, iOS</div>
+            <div><strong>Certifications</strong><br>A+, Security+, PC Pro, Security Pro</div>
+            <div><strong>Strengths</strong><br>Leadership, training, protocol development, safety compliance</div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact fade-in">
+        <h3>Contact</h3>
+        <p>Email: wc.mccown@gmail.com</p>
+        <p>Phone: (606) 226-5931</p>
+        <p>Location: Van Lear, KY</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 William McCown — Van Lear, KY</p>
+        <p>Email: wc.mccown@gmail.com · Phone: (606) 226-5931</p>
+    </footer>
+
+
+    <script>
+        const elements = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        elements.forEach(el => observer.observe(el));
+    </script>
+
+    <script>
+        const body = document.body;
+        const icon = document.getElementById('themeIcon');
+
+        // Load saved theme
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark');
+            icon.textContent = '☀️';
+        }
+
+        icon.addEventListener('click', () => {
+            body.classList.toggle('dark');
+            const isDark = body.classList.contains('dark');
+            icon.textContent = isDark ? '☀️' : '🌙';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    </script>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+
+
+
+</body>
+</html>
