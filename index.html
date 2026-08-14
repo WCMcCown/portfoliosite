@@ -59,6 +59,7 @@
     <section class="projects fade-in" id="projects">
         <h3>Projects</h3>
 
+        <!-- Project 1 -->
         <div class="project-card">
             <img src="seizuredoc.png" alt="SeizureDoc screenshot">
             <div class="project-info">
@@ -146,9 +147,9 @@
     <section class="skills fade-in" id="skills">
         <h3>Skills</h3>
         <div class="skills-grid">
-            <div><strong>Languages</strong><br>Python, JavaScript, Java, PHP</div>
+            <div><strong>Languages</strong><br>Python, JavaScript, Java, PHP, SQL, HTML, CSS</div>
             <div><strong>Frameworks</strong><br>React Native, Kivy/KivyMD</div>
-            <div><strong>Tools</strong><br>Git, XAMPP, SQLite</div>
+            <div><strong>Tools</strong><br>Git, XAMPP, SQLite, WordPress</div>
             <div><strong>Systems</strong><br>Windows, Linux, Android, iOS</div>
             <div><strong>Certifications</strong><br>A+, Security+, PC Pro, Security Pro</div>
             <div><strong>Strengths</strong><br>Leadership, training, protocol development, safety compliance</div>
@@ -184,23 +185,44 @@
         elements.forEach(el => observer.observe(el));
     </script>
 
+    <!-- Dark Mode -->
     <script>
         const body = document.body;
         const icon = document.getElementById('themeIcon');
 
-        // Load saved theme
-        if (localStorage.getItem('theme') === 'dark') {
-            body.classList.add('dark');
-            icon.textContent = '☀️';
+        // Check saved preference
+        const savedTheme = localStorage.getItem('theme');
+
+        // Check system preference
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        // Apply theme on load
+        if (savedTheme) {
+            body.classList.toggle('dark', savedTheme === 'dark');
+            icon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+        } else {
+            body.classList.toggle('dark', systemPrefersDark);
+            icon.textContent = systemPrefersDark ? '☀️' : '🌙';
         }
 
+        // Toggle theme manually
         icon.addEventListener('click', () => {
-            body.classList.toggle('dark');
-            const isDark = body.classList.contains('dark');
+            const isDark = body.classList.toggle('dark');
             icon.textContent = isDark ? '☀️' : '🌙';
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
         });
-    </script>
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            // Only auto-switch if user hasn't manually chosen a theme
+            if (!localStorage.getItem('theme')) {
+                const isDark = e.matches;
+                body.classList.toggle('dark', isDark);
+                icon.textContent = isDark ? '☀️' : '🌙';
+            }
+        });
+        </script>
+
 
     <script>
         const hamburgerBtn = document.getElementById('hamburgerBtn');
