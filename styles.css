@@ -332,12 +332,24 @@ body.dark .theme-icon {
 /* Footer */
 .footer {
     text-align: center;
-    padding: 40px 20px;
+    padding: 40px 30px;
     margin-top: 80px;
     background: #f4f4f4;
     color: #444;
     font-size: 15px;
     border-top: 1px solid #ddd;
+}
+
+.footer-divider {
+    width: 60%;
+    height: 1px;
+    background: rgba(0,0,0,0.15);
+    margin: 20px auto 15px auto;
+}
+
+/* Dark mode */
+body.dark .footer-divider {
+    background: rgba(255,255,255,0.15);
 }
 
 .social-links {
@@ -354,10 +366,63 @@ body.dark .theme-icon {
     transition: fill 0.3s ease, transform 0.3s ease;
 }
 
+.social-icon {
+    position: relative;
+}
+
+.social-icon::after {
+    content: attr(aria-label);
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    white-space: nowrap;
+}
+
+/* Dark mode tooltip */
+body.dark .social-icon::after {
+    background: #eee;
+    color: #222;
+}
+
+.social-icon:hover::after {
+    opacity: 1;
+}
+
 .social-icon:hover .icon {
     fill: #4a6cf7;
     transform: scale(1.15);
 }
+
+.icon path {
+    stroke: currentColor;
+    stroke-width: 1.5;
+    fill: none;
+    stroke-dasharray: 120;
+    stroke-dashoffset: 120;
+    animation: drawIcon 1.2s ease forwards;
+}
+
+@keyframes drawIcon {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/* Dark mode */
+body.dark .icon {
+    color: #ccc;
+}
+
 
 /* Dark mode */
 body.dark .social-icon .icon {
