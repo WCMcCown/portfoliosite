@@ -51,9 +51,17 @@
             <p>I recently completed my BS in Computer Information Technology at Western Kentucky University, focusing on programming and software engineering. I enjoy building tools that track data, visualize trends, and help people make informed decisions.</p>
         </div>
         <div class="about-photo">
-            <img src="media/graduation.jpg" alt="Graduation photo" class="about-photo-img">
+            <img src="media/graduation.jpg" 
+                alt="Graduation photo" 
+                class="about-photo-img" 
+                id="aboutPhoto">
         </div>
     </section>
+
+    <div id="photoModal" class="photo-modal">
+        <span class="close-modal">&times;</span>
+        <img id="modalImage" class="modal-image">
+    </div>
 
     <!-- Projects -->
     <section class="projects fade-in" id="projects">
@@ -75,70 +83,36 @@
                     <li>Building UI that stays out of the user’s way</li>
                 </ul>
 
-                <a href="#" class="project-link">View on GitHub</a>
+                <a href="https://github.com/WCMcCown/seizuredoc" class="project-link">View on GitHub</a>
             </div>
         </div>
 
         <!-- Project 2 -->
         <div class="project-card">
-            <img src="training-dashboard.png" alt="Training Dashboard screenshot">
+            <img src="media/portfolio-preview.png" alt="Portfolio Website screenshot">
             <div class="project-info">
-                <h4>Training & Protocol Manager Dashboard — Web App</h4>
-                <p>A web-based dashboard designed to organize employee training records, track certifications, and manage protocol updates across multiple EMS locations. Inspired by my experience overseeing training and safety compliance for more than 100 employees.</p>
+                <h4>Portfolio Website — HTML, CSS, JavaScript</h4>
 
-                <p class="tech">Tech: PHP, SQL, HTML5, CSS, XAMPP</p>
+                <p>A fully responsive personal portfolio website designed to showcase my transition from EMS leadership into software engineering. Built with a focus on clean UI, modern layout structure, and practical features like dark/light theme auto-detection, smooth animations, and mobile-optimized navigation.</p>
+
+                <p class="tech">Tech: HTML5, CSS3, JavaScript, GitHub Pages</p>
 
                 <ul class="learned">
-                    <li>Structuring relational data for real-world workflows</li>
-                    <li>Building clean, functional admin interfaces</li>
-                    <li>Designing simple forms for fast data entry</li>
-                    <li>Managing user roles and access levels</li>
-                    <li>Turning operational experience into software requirements</li>
+                    <li>Designing clean, modern layouts with responsive breakpoints</li>
+                    <li>Implementing dark/light theme toggles with system auto-detect</li>
+                    <li>Building mobile navigation with hamburger menus</li>
+                    <li>Managing project assets and folder structure</li>
+                    <li>Deploying static sites using Git + GitHub Pages</li>
+                    <li>Writing maintainable front-end code without frameworks</li>
                 </ul>
 
-                <a href="#" class="project-link">View on GitHub</a>
+                <a href="https://github.com/WCMcCown/portfoliosite" class="project-link">View on GitHub</a>
+                <a href="http://www.wcmccown.com" class="project-link">Live Site</a>
             </div>
         </div>
 
-        <!-- Project 3 -->
-        <div class="project-card">
-            <img src="incident-tool.png" alt="Incident Log Tool screenshot">
-            <div class="project-info">
-                <h4>Incident Log & Reporting Tool — Python / SQLite</h4>
-                <p>A lightweight desktop tool for logging incident details, generating summaries, and exporting reports. Designed to mimic the workflow of EMS run sheets while improving clarity and reducing repetitive data entry.</p>
 
-                <p class="tech">Tech: Python, SQLite</p>
 
-                <ul class="learned">
-                    <li>Designing structured data entry flows</li>
-                    <li>Building small tools that solve specific problems</li>
-                    <li>Working with SQLite for fast local storage</li>
-                    <li>Generating clean, readable reports</li>
-                </ul>
-
-                <a href="#" class="project-link">View on GitHub</a>
-            </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-card">
-            <img src="homelab-dashboard.png" alt="Homelab Dashboard screenshot">
-            <div class="project-info">
-                <h4>Homelab Dashboard — JavaScript / Linux</h4>
-                <p>A simple dashboard for monitoring local services, storage usage, and system health across a small homelab environment. Built to centralize information from multiple machines and make troubleshooting easier.</p>
-
-                <p class="tech">Tech: JavaScript, Linux, Shell scripts</p>
-
-                <ul class="learned">
-                    <li>Working with system-level data</li>
-                    <li>Building dashboards that surface useful information</li>
-                    <li>Automating routine checks</li>
-                    <li>Designing interfaces that stay clean and readable</li>
-                </ul>
-
-                <a href="#" class="project-link">View on GitHub</a>
-            </div>
-        </div>
 
 
     </section>
@@ -152,7 +126,7 @@
             <div><strong>Tools</strong><br>Git, XAMPP, SQLite, WordPress</div>
             <div><strong>Systems</strong><br>Windows, Linux, Android, iOS</div>
             <div><strong>Certifications</strong><br>A+, Security+, PC Pro, Security Pro</div>
-            <div><strong>Strengths</strong><br>Leadership, training, protocol development, safety compliance</div>
+            <div><strong>Strengths</strong><br>Quick learner, leadership, training, protocol development, safety compliance</div>
         </div>
     </section>
 
@@ -168,6 +142,20 @@
     <footer class="footer">
         <p>© 2026 William McCown — Van Lear, KY</p>
         <p>Email: wc.mccown@gmail.com · Phone: (606) 226-5931</p>
+
+        <div class="social-links">
+            <a href="https://github.com/WCMcCown" target="_blank" class="social-icon" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" class="icon">
+                    <path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.4-3.9-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.8-.8.8-.8-.8-.1-1.6-.4-2.2-.9-1.4-1.2-1.4-3.3-.1-4.5.4-.4.9-.7 1.4-.9-.1-.3-.3-1.1.1-2.2 0 0 .8-.3 2.5.9.7-.2 1.4-.3 2.1-.3.7 0 1.4.1 2.1.3 1.7-1.2 2.5-.9 2.5-.9.4 1.1.2 1.9.1 2.2.5.2 1 .5 1.4.9 1.3 1.2 1.3 3.3-.1 4.5-.6.5-1.4.8-2.2.9 0 0-.2.9.8.8 0 0 .6-1 1.7-1.1 0 0 1.1 0 .1.7 0 0-.7.3-1.2 1.5 0 0-.7 2.1-3.9 1.4v2.1c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/>
+                </svg>
+            </a>
+
+            <a href="https://www.linkedin.com/in/williammccown/" target="_blank" class="social-icon" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" class="icon">
+                    <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.1c.5-.9 1.8-2.2 3.9-2.2 4.2 0 5 2.8 5 6.5V24h-4v-8.2c0-2-.1-4.6-2.8-4.6-2.8 0-3.2 2.2-3.2 4.4V24h-4V8z"/>
+                </svg>
+            </a>
+        </div>
     </footer>
 
 
@@ -233,6 +221,28 @@
         });
     </script>
 
+    <!-- Photo Modal -->
+    <script>
+        const aboutPhoto = document.getElementById('aboutPhoto');
+        const photoModal = document.getElementById('photoModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModal = document.querySelector('.close-modal');
+
+        aboutPhoto.addEventListener('click', () => {
+            modalImage.src = aboutPhoto.src;
+            photoModal.style.display = 'flex';
+        });
+
+        closeModal.addEventListener('click', () => {
+            photoModal.style.display = 'none';
+        });
+
+        photoModal.addEventListener('click', (e) => {
+            if (e.target === photoModal) {
+                photoModal.style.display = 'none';
+            }
+        });
+    </script>
 
 
 </body>
