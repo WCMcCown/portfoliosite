@@ -1,7 +1,7 @@
 /* styles.css */
 
 * {
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 
@@ -280,10 +280,26 @@ body.dark .theme-icon {
     gap: 40px;
     margin-bottom: 80px;
     align-items: flex-start;
+    background: linear-gradient(180deg, #ffffff, #f7f9fc);
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card p {
+    color: #444;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.10);
 }
 
 .project-card img {
     width: 320px;
+    border: 1px solid rgba(0,0,0,0.06);
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
@@ -295,6 +311,7 @@ body.dark .theme-icon {
 .tech {
     font-style: italic;
     color: #555;
+    margin-top: 6px;
 }
 
 .learned {
@@ -302,10 +319,17 @@ body.dark .theme-icon {
 }
 
 .project-link {
+    color: #3a7afe;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 18px;
     display: inline-block;
-    margin-top: 15px;
-    color: #222;
-    text-decoration: underline;
+    transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+.project-link:hover {
+    color: #1e3a8a;
+    text-shadow: 0 0 6px rgba(58, 122, 254, 0.3);
 }
 
 /* Skills */
@@ -418,22 +442,6 @@ body.dark .social-icon::after {
 }
 
 
-/* Dark mode */
-body.dark .icon {
-    color: #ccc;
-}
-
-
-/* Dark mode */
-body.dark .social-icon .icon {
-    fill: #ccc;
-}
-
-body.dark .social-icon:hover .icon {
-    fill: #f5d76e;
-}
-
-
 /* Animations */
 .fade-in {
     opacity: 0;
@@ -454,10 +462,49 @@ body.dark .social-icon:hover .icon {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Dark Mode */
+
+/* Dark mode */
 body.dark {
     background: #121212;
     color: #e6e6e6;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4 {
+    color: #f2f2f2; /* brighter headings */
+}
+
+body.dark img {
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+body.dark .icon {
+    color: #ccc;
+}
+
+/* Buttons in dark mode */
+body.dark button,
+body.dark .btn {
+    background: #2a2a2a;
+    color: #f0f0f0;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+body.dark button:hover,
+body.dark .btn:hover {
+    background: #3a3a3a;
+    border-color: #ffd86b;
+    box-shadow: 0 0 8px rgba(255, 216, 107, 0.4);
+}
+
+body.dark .social-icon .icon {
+    fill: #ccc;
+}
+
+body.dark .social-icon:hover .icon {
+    fill: #f5d76e;
 }
 
 body.dark .theme-icon {
@@ -486,12 +533,12 @@ body.dark .navbar {
     border-bottom: 1px solid #333;
 }
 
-body.dark .nav-links a {
-    color: #e6e6e6;
+body.dark nav a {
+    color: #eaeaea;
 }
 
 body.dark .nav-links a:hover {
-    color: #bbb;
+    color: #ffd86b;
 }
 
 body.dark .hero-buttons .btn {
@@ -508,6 +555,20 @@ body.dark .about-photo .photo-placeholder {
     background: #333;
 }
 
+body.dark .project-card {
+    background: #1c1c1c;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+body.dark .project-card p {
+    color: #dcdcdc;
+}
+
+body.dark .tech {
+    color: #cfcfcf; /* readable but subtle */
+}
+
 body.dark .about-photo-img {
     box-shadow: 0 4px 12px rgba(255,255,255,0.08);
 }
@@ -516,12 +577,37 @@ body.dark .project-card img {
     box-shadow: 0 4px 12px rgba(255,255,255,0.08);
 }
 
+body.dark .project-link {
+    color: #4a8cff; /* soft blue */
+    font-weight: 500;
+}
+
+body.dark .project-link:hover {
+    color: #ffd86b; /* warm gold highlight */
+    text-shadow: 0 0 6px rgba(255, 216, 107, 0.4);
+}
+
 body.dark .footer {
     background: #1e1e1e;
     color: #ccc;
     border-top: 1px solid #333;
 }
 
+body.dark .footer-divider {
+    background: rgba(255,255,255,0.15);
+}
+
+body.dark .social-icon .icon {
+    color: #ccc;
+}
+
+body.dark .social-icon:hover .icon {
+    color: #ffd86b;
+}
+
+body.dark .tech {
+    color: #e0e0e0; /* soft light gray */
+}
 
 /* Responsive Design */
 
